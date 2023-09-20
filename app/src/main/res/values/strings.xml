@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">GST calculator</string>
+    <string name="plus_three">+3%</string>
+    <string name="plus_five">+5%</string>
+    <string name="plus_twelve">+12%</string>
+    <string name="plus_oneeight">+18%</string>
+    <string name="plus_twoeight">+28%</string>
+
+    <string name="min_three">-3%</string>
+    <string name="min_five">-5%</string>
+    <string name="min_twelve">-12%</string>
+    <string name="min_oneeight">-18%</string>
+    <string name="min_twoeight">-28%</string>
+
+
+    <string name="all_clear">AC</string>
+    <string name="modulo">%</string>
+    <string name="backspace">B</string>
+    <string name="seven">7</string>
+    <string name="nine">9</string>
+    <string name="eight">8</string>
+    <string name="six">6</string>
+    <string name="five">5</string>
+    <string name="four">4</string>
+    <string name="three">3</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="zero">0</string>
+    <string name="twozero">00</string>
+    <string name="dot">.</string>
+    <string name="equal">=</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multi">x</string>
+    <string name="division">/</string>
+
+
+</resources>

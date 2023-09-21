@@ -212,6 +212,7 @@
             android:background="@drawable/corners"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_division"
             android:layout_width="90dp"
             android:layout_height="78dp"
             android:text="@string/division"
@@ -255,6 +256,7 @@
             android:background="@drawable/corners"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_multi"
             android:layout_width="90dp"
             android:layout_height="78dp"
             android:text="@string/multi"
@@ -298,6 +300,7 @@
             android:background="@drawable/corners"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_minus"
             android:layout_width="90dp"
             android:layout_height="78dp"
             android:text="@string/minus"
@@ -343,6 +346,7 @@
             android:background="@drawable/corners"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_plus"
             android:layout_width="90dp"
             android:layout_height="78dp"
             android:text="@string/plus"
@@ -386,6 +390,7 @@
             android:background="@drawable/corners"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_equal"
             android:layout_width="90dp"
             android:layout_height="78dp"
             android:text="@string/equal"

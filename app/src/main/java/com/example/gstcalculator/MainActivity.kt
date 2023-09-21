@@ -17,12 +17,24 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.btnTwozero?.setOnClickListener { appendInput("00") }
+        binding.btnZero?.setOnClickListener { appendInput("0") }
         binding.btnOne?.setOnClickListener { appendInput("1") }
         binding.btnTwo?.setOnClickListener { appendInput("2") }
         binding.btnThree?.setOnClickListener { appendInput("3") }
         binding.btnFour?.setOnClickListener { appendInput("4") }
         binding.btnFive?.setOnClickListener { appendInput("5") }
-        binding.btnSix?.setOnClickListener { appendInput("7") }
+        binding.btnSix?.setOnClickListener { appendInput("6") }
+        binding.btnSeven?.setOnClickListener { appendInput("7") }
+        binding.btnEight?.setOnClickListener { appendInput("8") }
+        binding.btnNine?.setOnClickListener { appendInput("9") }
+
+        //math operations
+        binding.btnDivision?.setOnClickListener { appendInput("/") }
+        binding.btnMulti?.setOnClickListener { appendInput("X") }
+        binding.btnMinus?.setOnClickListener { appendInput("-") }
+        binding.btnPlus?.setOnClickListener { appendInput("+") }
+        //binding.btnEqual?.setOnClickListener { appendInput("") }
 
         binding.btnBacksppace?.setOnClickListener {
             handleBackspaceClick()

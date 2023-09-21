@@ -2,5 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="bg_gray">#969090</color>
+    <color name="bg_gray">#7B7979</color>
+
+    <color name="bg_dark">#1E2020</color>
 </resources>

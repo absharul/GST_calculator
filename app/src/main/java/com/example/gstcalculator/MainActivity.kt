@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity() {
             val currentText = binding.ipCal?.text.toString()
             val newText = currentText + input
             binding.ipCal?.setText(newText)
+            binding.ipCal?.text?.let { binding.ipCal?.setSelection(it.length) }
+
         }
 
         private fun handleBackspaceClick() {

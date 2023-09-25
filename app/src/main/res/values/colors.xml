@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bg_gray">#7B7979</color>
-
     <color name="bg_dark">#1E2020</color>
+    <color name="cur_green">#ABFF24</color>
+    <color name="clear_red">#FF0000</color>
 </resources>

@@ -1,4 +1,9 @@
 package com.example.gstcalculator
 
-class Mathoperation {
+import com.example.gstcalculator.databinding.ActivityMainBinding
+
+class Mathoperation(): MainActivity(){
+    private lateinit var binding: ActivityMainBinding
+
+
 }

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/main_display"
+        android:layout_width="390dp"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+
+    <GridLayout
+        android:id="@+id/grid1_box"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:columnCount="5"
+        android:maxWidth="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_display">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plus_three"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#D87409"
+            android:text="@string/plus_three"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plus_five"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#625A51"
+            android:text="@string/plus_five"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plus_twelve"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#D87409"
+            android:text="@string/plus_twelve"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plus_eighteen"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#625A51"
+            android:text="@string/plus_oneeight"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plus_twoeight"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#D87409"
+            android:text="@string/plus_twoeight"
+            android:textColor="@color/white" />
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/grid2_box"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:columnCount="5"
+        android:maxWidth="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid1_box">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#D87409"
+            android:text="@string/min_three"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#88B127"
+            android:text="@string/min_five"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#D87409"
+            android:text="@string/min_twelve"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#88B127"
+            android:text="@string/min_oneeight"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#D87409"
+            android:text="@string/min_twoeight"
+            android:textColor="@color/white" />
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/main_gridbox"
+        android:layout_width="390dp"
+        android:layout_height="410dp"
+        android:layout_marginTop="5dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid2_box">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:backgroundTint="@color/bg_gray"
+            android:text="@string/all_clear"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:backgroundTint="@color/bg_gray"
+            android:text="@string/modulo"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:backgroundTint="@color/bg_gray"
+            android:text="@string/backspace"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/division"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/seven"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/eight"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/nine"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/multi"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/four"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/five"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/six"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/minus"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/one"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/two"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/three"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/plus"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/zero"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/twozero"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/dot"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="97.5dp"
+            android:layout_height="82dp"
+            android:text="@string/equal"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+
+    </GridLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,14 +2,15 @@ package com.example.gstcalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.EditText
-import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.example.gstcalculator.databinding.ActivityMainBinding
+import org.mariuszgromada.math.mxparser.Expression
+import java.text.DecimalFormat
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,47 +18,65 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.btnTwozero?.setOnClickListener { appendInput("00") }
-        binding.btnZero?.setOnClickListener { appendInput("0") }
-        binding.btnOne?.setOnClickListener { appendInput("1") }
-        binding.btnTwo?.setOnClickListener { appendInput("2") }
-        binding.btnThree?.setOnClickListener { appendInput("3") }
-        binding.btnFour?.setOnClickListener { appendInput("4") }
-        binding.btnFive?.setOnClickListener { appendInput("5") }
-        binding.btnSix?.setOnClickListener { appendInput("6") }
-        binding.btnSeven?.setOnClickListener { appendInput("7") }
-        binding.btnEight?.setOnClickListener { appendInput("8") }
-        binding.btnNine?.setOnClickListener { appendInput("9") }
+        binding.btnZero?.setOnClickListener {binding.ipCal?.text = appendInpuText("0") }
+        binding.btnOne?.setOnClickListener { binding.ipCal?.text = appendInpuText("1") }
+        binding.btnTwo?.setOnClickListener {binding.ipCal?.text = appendInpuText("2") }
+        binding.btnThree?.setOnClickListener {binding.ipCal?.text = appendInpuText("3") }
+        binding.btnFour?.setOnClickListener {binding.ipCal?.text = appendInpuText("4") }
+        binding.btnFive?.setOnClickListener {binding.ipCal?.text = appendInpuText("5") }
+        binding.btnSix?.setOnClickListener {binding.ipCal?.text = appendInpuText("6") }
+        binding.btnSeven?.setOnClickListener {binding.ipCal?.text = appendInpuText("7") }
+        binding.btnEight?.setOnClickListener {binding.ipCal?.text = appendInpuText("8") }
+        binding.btnNine?.setOnClickListener {binding.ipCal?.text = appendInpuText("9") }
 
         //math operations
-        binding.btnDivision?.setOnClickListener { appendInput("/") }
-        binding.btnMulti?.setOnClickListener { appendInput("X") }
-        binding.btnMinus?.setOnClickListener { appendInput("-") }
-        binding.btnPlus?.setOnClickListener { appendInput("+") }
-        //binding.btnEqual?.setOnClickListener { appendInput("") }
+        binding.btnDivision?.setOnClickListener {binding.ipCal?.text = appendInpuText("÷") }
+        binding.btnMulti?.setOnClickListener {binding.ipCal?.text = appendInpuText("×") }
+        binding.btnMinus?.setOnClickListener {binding.ipCal?.text = appendInpuText("-") }
+        binding.btnPlus?.setOnClickListener {binding.ipCal?.text = appendInpuText("+") }
+        binding.btnEqual?.setOnClickListener {showResult()}
 
-        binding.btnBacksppace?.setOnClickListener {
-            handleBackspaceClick()
+        binding.btnClear?.setOnClickListener {
+            binding.ipCal?.text = ""
+            binding.resultView?.text = ""
         }
+
+
+
 
 
     }
 
-        private fun appendInput(input: String) {
-            val currentText = binding.ipCal?.text.toString()
-            val newText = currentText + input
-            binding.ipCal?.setText(newText)
-            binding.ipCal?.text?.let { binding.ipCal?.setSelection(it.length) }
+    private fun appendInpuText(input: String): String{
+        return "${binding.ipCal?.text}$input"
+    }
 
-        }
+    private fun getInputExpression(): String {
+        var expression = binding.ipCal?.text?.replace(Regex("÷"), "/")
+        expression = expression?.replace(Regex("×"), "*") // Use the safe call operator here
+        return expression ?: "" // Return an empty string if expression is null
+    }
 
-        private fun handleBackspaceClick() {
-            val currentText = binding.ipCal?.text.toString()
-            if (currentText.isNotEmpty()) {
-                val newText = currentText.substring(0, currentText.length - 1)
-                binding.ipCal?.setText(newText)
+    private fun showResult(){
+        try{
+          val expression = getInputExpression()
+            val result = Expression(expression).calculate()
+            if(result.isNaN()){
+             binding.resultView?.text = "Error"
+             binding.resultView?.setTextColor(ContextCompat.getColor(this,R.color.clear_red))
             }
+            else{
+             binding.resultView?.text = DecimalFormat("0.######").format(result).toString()
+             binding.resultView?.setTextColor(ContextCompat.getColor(this,R.color.black))
+            }
+        } catch (e: Exception) {
+            binding.resultView?.text = "Error"
+            binding.resultView?.setTextColor(ContextCompat.getColor(this,R.color.clear_red))
         }
+    }
+
 
 }
+
+
 
